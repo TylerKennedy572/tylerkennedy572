@@ -226,6 +226,9 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -254,54 +257,7 @@ p {
     flex-wrap: wrap;
 }
 
-.hero-visual {
-    position: relative;
-    height: 400px;
-}
 
-.floating-card {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-lg);
-    padding: 1.5rem;
-    animation: float 6s ease-in-out infinite;
-}
-
-.floating-card:nth-child(1) {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-card:nth-child(2) {
-    top: 50%;
-    right: 20%;
-    animation-delay: 2s;
-}
-
-.floating-card:nth-child(3) {
-    bottom: 20%;
-    left: 30%;
-    animation-delay: 4s;
-}
-
-.card-content {
-    text-align: center;
-    color: white;
-}
-
-.card-content i {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
 
 .scroll-indicator {
     position: absolute;
