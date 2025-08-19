@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
+    --primary-color: #2f3179;
+    --secondary-color: #5b1fe7;
     --accent-color: #06b6d4;
     --dark-color: #0f172a;
     --light-color: #f8fafc;
@@ -122,7 +122,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(28, 28, 74, 0.534);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -164,7 +164,7 @@ p {
 
 .nav-link {
     text-decoration: none;
-    color: var(--dark-color);
+    color: white;
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -197,7 +197,7 @@ p {
 .bar {
     width: 25px;
     height: 3px;
-    background: var(--dark-color);
+    background: white;
     margin: 3px 0;
     transition: var(--transition);
 }
@@ -221,7 +221,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background: url('bg-image.jpg') center/cover no-repeat;
     opacity: 0.2;
 }
 
@@ -347,55 +347,27 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
 
-.stat {
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--light-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-}
-
-.stat:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    color: var(--gray-color);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
 
 .about-image .image-container {
     position: relative;
-}
-
-.image-placeholder {
     width: 300px;
     height: 300px;
-    background: var(--gradient-primary);
     border-radius: var(--border-radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 4rem;
+    overflow: hidden;
     box-shadow: var(--shadow-xl);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transition);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
 }
 
 /* Skills Section */
@@ -488,6 +460,14 @@ section {
     justify-content: center;
     color: white;
     font-size: 3rem;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .project-content {
@@ -538,9 +518,15 @@ section {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
 }
 
 .contact-info h3 {
@@ -550,17 +536,22 @@ section {
 
 .contact-details {
     margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
     padding: 1rem;
     background: white;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
+    min-width: 250px;
+    justify-content: center;
 }
 
 .contact-item i {
@@ -572,6 +563,7 @@ section {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .social-link {
@@ -592,34 +584,7 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
-.contact-form {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-}
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    transition: var(--transition);
-    background: white;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-}
 
 /* Footer */
 .footer {
