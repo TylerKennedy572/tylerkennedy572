@@ -617,6 +617,10 @@ section {
         padding: 2rem 0;
     }
 
+    .nav-menu .nav-link {
+        color: var(--dark-color);
+    }
+
     .nav-menu.active {
         left: 0;
     }
