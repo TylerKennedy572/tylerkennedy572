@@ -145,23 +145,29 @@ const showNotification = (message, type = 'info') => {
     }, 5000);
 };
 
-// Typing animation for hero title
+// Typing animation for hero title (types inside the gradient span)
 const typeWriter = () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
-    
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
-    
-    let i = 0;
-    const typeInterval = setInterval(() => {
-        if (i < text.length) {
-            heroTitle.textContent += text.charAt(i);
-            i++;
+    const gradientSpan = document.querySelector('.hero-title .gradient-text');
+    if (!gradientSpan) return;
+
+    const fullText = gradientSpan.textContent.trim();
+    gradientSpan.textContent = '';
+    gradientSpan.classList.add('typing');
+
+    let currentIndex = 0;
+    const intervalMs = 60;
+
+    const typeNext = () => {
+        if (currentIndex < fullText.length) {
+            gradientSpan.textContent += fullText.charAt(currentIndex);
+            currentIndex++;
+            setTimeout(typeNext, intervalMs);
         } else {
-            clearInterval(typeInterval);
+            gradientSpan.classList.remove('typing');
         }
-    }, 50);
+    };
+
+    typeNext();
 };
 
 // Initialize everything when DOM is loaded
