@@ -150,36 +150,10 @@ const showNotification = (message, type = 'info') => {
     }, 5000);
 };
 
-// Typing animation for hero title (types inside the gradient span)
-const typeWriter = () => {
-    const gradientSpan = document.querySelector('.hero-title .gradient-text');
-    if (!gradientSpan) return;
-
-    const fullText = gradientSpan.textContent.trim();
-    gradientSpan.textContent = '';
-    gradientSpan.classList.add('typing');
-
-    let currentIndex = 0;
-    const intervalMs = 60;
-
-    const typeNext = () => {
-        if (currentIndex < fullText.length) {
-            gradientSpan.textContent += fullText.charAt(currentIndex);
-            currentIndex++;
-            setTimeout(typeNext, intervalMs);
-        } else {
-            gradientSpan.classList.remove('typing');
-        }
-    };
-
-    typeNext();
-};
+// Removed typing animation to simplify interactions
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Start typing animation after a short delay
-    setTimeout(typeWriter, 500);
-    
     // Initial skill bar animation check
     animateSkillBars();
     
