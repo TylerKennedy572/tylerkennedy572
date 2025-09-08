@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary-color: #e3a750;
-    --secondary-color: #bcd4cc;
-    --accent-color: #002F45;
+    --primary-color: #91040c;
+    --secondary-color: #d0ba98;
+    --accent-color: #23140c;
     --dark-color: #0f172a;
     --light-color: #f8fafc;
     --gray-color: #64748b;
@@ -31,7 +31,7 @@
 }
 
 body {
-    font-family: poppins, sans-serif;
+    font-family: 'League Spartan', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
     background-color: var(--light-color);
@@ -46,6 +46,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -121,7 +122,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #1c1c4a;
+    background: var(--primary-color);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -166,6 +167,10 @@ p {
     padding: 0.5rem 0;
 }
 
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -173,7 +178,7 @@ p {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: currentColor;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(-50%);
 }
@@ -204,7 +209,7 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--gradient-dark);
+    background-image: url(hero-bg.png);
     color: white;
     position: relative;
     overflow: hidden;
@@ -218,7 +223,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('bg-image.jpg') center/cover no-repeat;
+    background: var(--secondary-color);
     opacity: 0.2;
 }
 
@@ -324,14 +329,14 @@ section {
 
 /* About Section */
 .about {
-    background: rgb(244, 244, 244);
+    background: #d0cac0;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: center; 
 }
 
 .about-text h3 {
@@ -363,7 +368,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background: rgb(255, 255, 255);
+    background: #daceb8;
 }
 
 .projects-grid {
@@ -692,7 +697,7 @@ section {
 }
 
 .cta-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.1;
@@ -724,7 +729,7 @@ section {
 
 .cta-btn-primary {
     background: #ffffff;
-    color: var(--primary-color);
+    color: black;
     border: none;
     font-weight: 700;
     font-size: 1.1rem;
