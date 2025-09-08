@@ -36,6 +36,7 @@ body {
     color: var(--dark-color);
     background-color: var(--light-color);
     overflow-x: hidden;
+    cursor: url('cursor.png'), auto;
 }
 
 .container {
@@ -209,7 +210,7 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(hero-bg.png);
+    background-image: url(hero-image.png);
     color: white;
     position: relative;
     overflow: hidden;
@@ -223,8 +224,8 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--secondary-color);
-    opacity: 0.2;
+    background: #000000b7;
+    opacity: 0.5;
 }
 
 .hero-container {
@@ -265,7 +266,7 @@ p {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 3rem;
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 100%;
     font-weight: 400;
 }
 
@@ -329,7 +330,7 @@ section {
 
 /* About Section */
 .about {
-    background: #d0cac0;
+    background: #d8c39b4e;
 }
 
 .about-content {
@@ -368,7 +369,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background: #daceb8;
+    background: #d8c39b4e;
 }
 
 .projects-grid {
