@@ -36,7 +36,16 @@ body {
     color: var(--dark-color);
     background-color: var(--light-color);
     overflow-x: hidden;
-    cursor: url('cursor.png'), auto;
+    cursor: url('pointer.png') 0 0, url('cursor.png') 0 0, auto;
+}
+
+/* Cursor refinements */
+a, button, .btn, .nav-link, .project-link, .social-link, .hamburger {
+    cursor: url('pointer.png') 0 0, pointer;
+}
+
+input, textarea, select {
+    cursor: text;
 }
 
 .container {
@@ -321,11 +330,7 @@ section {
 }
 
 .section-line {
-    width: 80px;
-    height: 4px;
-    background: var(--gradient-primary);
-    margin: 0 auto;
-    border-radius: 2px;
+    display: none;
 }
 
 /* About Section */
@@ -527,7 +532,7 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--dark-color);
+    background: rgb(44, 44, 44);
     color: white;
     text-align: center;
     padding: 2rem 0;
