@@ -1,4 +1,6 @@
 /* Reset and Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +8,9 @@
 }
 
 :root {
-    --primary-color: #91040c;
-    --secondary-color: #d0ba98;
-    --accent-color: #23140c;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --accent-color: #bcd4cc;
     --dark-color: #0f172a;
     --light-color: #f8fafc;
     --gray-color: #64748b;
@@ -31,22 +33,14 @@
 }
 
 body {
-    font-family: 'League Spartan', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: 'Source Sans Pro', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: var(--light-color);
+    color: #ffffff;
+    background-color: #000000;
     overflow-x: hidden;
-    cursor: url('pointer.png') 0 0, url('cursor.png') 0 0, auto;
 }
 
-/* Cursor refinements */
-a, button, .btn, .nav-link, .project-link, .social-link, .hamburger {
-    cursor: url('pointer.png') 0 0, pointer;
-}
 
-input, textarea, select {
-    cursor: text;
-}
 
 .container {
     max-width: 1200px;
@@ -56,7 +50,7 @@ input, textarea, select {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -68,7 +62,7 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 
 p {
     margin-bottom: 1rem;
-    color: var(--gray-color);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* Buttons */
@@ -132,7 +126,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--primary-color);
+    background: #000000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -151,7 +145,7 @@ p {
 .nav-logo .logo-text {
     font-weight: 800;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: white;
 }
 
 .nav-logo img {
@@ -170,7 +164,7 @@ p {
 
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -178,7 +172,7 @@ p {
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
+    color: #ffffff;
 }
 
 .nav-link::after {
@@ -219,7 +213,9 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(hero-image.png);
+    background-image: url(your-background-image.png); 
+    background-size: cover;
+    background-blend-mode: darken;
     color: white;
     position: relative;
     overflow: hidden;
@@ -262,10 +258,11 @@ p {
     line-height: 1.1;
     margin-bottom: 2rem;
     letter-spacing: -0.02em;
+    color: #ffffff;
 }
 
 .gradient-text {
-    color: inherit;
+    color: white;
 }
 
 
@@ -326,7 +323,7 @@ section {
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1rem;
-    color: var(--dark-color);
+    color: white;
 }
 
 .section-line {
@@ -335,7 +332,7 @@ section {
 
 /* About Section */
 .about {
-    background: #d8c39b4e;
+    background: #000000;
 }
 
 .about-content {
@@ -346,7 +343,7 @@ section {
 }
 
 .about-text h3 {
-    color: var(--dark-color);
+    color: white;
     margin-bottom: 1.5rem;
 }
 
@@ -374,7 +371,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background: #d8c39b4e;
+    background: #000000;
 }
 
 .projects-grid {
@@ -384,7 +381,7 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: #111111;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -419,7 +416,7 @@ section {
 }
 
 .project-content h3 {
-    color: var(--dark-color);
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -431,8 +428,9 @@ section {
 }
 
 .tech-tag {
-    background: var(--light-color);
-    color: var(--primary-color);
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #2a2a2a;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -446,19 +444,19 @@ section {
 }
 
 .project-link {
-    color: var(--primary-color);
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
 }
 
 .project-link:hover {
-    color: var(--secondary-color);
+    color: #ffffff;
 }
 
 /* Contact Section */
 .contact {
-    background: var(--light-color);
+    background: #000000;
 }
 
 .contact-content {
@@ -491,7 +489,7 @@ section {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: white;
+    background: #111111;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
     min-width: 250px;
@@ -499,7 +497,7 @@ section {
 }
 
 .contact-item i {
-    color: var(--primary-color);
+    color: #ffffff;
     font-size: 1.2rem;
 }
 
@@ -516,7 +514,7 @@ section {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
+    background: #111111;
     color: white;
     border-radius: 50%;
     text-decoration: none;
@@ -553,7 +551,7 @@ section {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: #000000;
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -562,7 +560,7 @@ section {
     }
 
     .nav-menu .nav-link {
-        color: var(--dark-color);
+        color: #ffffff;
     }
 
     .nav-menu.active {
@@ -649,7 +647,7 @@ section {
 
 /* Experience Section */
 .experience {
-    background: var(--light-color);
+    background: #000000;
 }
 
 .experience-content {
@@ -666,7 +664,7 @@ section {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: var(--gradient-dark);
+    background: #000000;
 }
 
 .cta-background {
@@ -703,7 +701,7 @@ section {
 }
 
 .cta-heading {
-    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.1;
@@ -713,7 +711,7 @@ section {
 }
 
 .cta-subheading {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans Pro', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-weight: 400;
     line-height: 1.7;
