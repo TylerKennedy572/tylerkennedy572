@@ -346,7 +346,7 @@ section {
 
 /* About Section */
 .about {
-    background: #161616;
+    background: #363636;
 }
 
 .about-content {
@@ -379,14 +379,13 @@ section {
     object-fit: cover;
     object-position: center;
     transition: var(--transition);
-    border: white 3px solid
 }
 
 
 
 /* Projects Section */
 .projects {
-    background: #282828;
+    background: #363636;
 }
 
 .projects-grid {
