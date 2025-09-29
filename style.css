@@ -858,13 +858,14 @@ section {
 }
 
 .category {
-    background-color: #fff;
+    background-color: #000000;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
     width: 250px;
     transition: transform 0.3s ease;
+    border: white 1px solid;
 }
 
 .category:hover {
@@ -879,13 +880,13 @@ section {
 }
 
 .category h2 {
-    color: #333;
+    color: #ffffff;
     font-size: 1.5em;
     margin-bottom: 5px;
 }
 
 .category p {
-    color: #666;
+    color: #ffffff;
     font-size: 1em;
 }
 
