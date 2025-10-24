@@ -136,7 +136,9 @@ html {
     height: 1px;
     background: var(--white);
     transition: 0.3s;
-}/* Her
+}
+
+/* Her
 o Section */
 .hero {
     min-height: 100vh;
@@ -156,7 +158,7 @@ o Section */
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         linear-gradient(90deg, transparent 79px, rgba(255, 255, 255, 0.03) 81px, transparent 82px),
         linear-gradient(rgba(255, 255, 255, 0.03) 79px, transparent 81px, transparent 82px);
     background-size: 80px 80px;
@@ -360,8 +362,9 @@ o Section */
 .skills-list li:hover {
     color: var(--black);
     transform: translateX(10px);
-}/
-* Work Section */
+}
+
+/* Work Section */
 .work {
     padding: 120px 0;
     background: var(--black);
@@ -414,31 +417,7 @@ o Section */
     position: relative;
 }
 
-.work-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--white);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-    z-index: 1;
-}
 
-.work-item:hover::before {
-    transform: scaleX(1);
-}
-
-.work-item:hover .work-info {
-    color: var(--black);
-}
-
-.work-item:hover .work-link {
-    color: var(--black);
-}
 
 .work-image {
     aspect-ratio: 16/10;
@@ -455,13 +434,13 @@ o Section */
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease;
-    filter: grayscale(100%);
+    transition: all 0.4s ease;
+    filter: grayscale(100%) contrast(1.2) brightness(0.9);
 }
 
 .work-item:hover .work-img {
     transform: scale(1.05);
-    filter: grayscale(0%);
+    filter: grayscale(0%) contrast(1) brightness(1);
 }
 
 .work-info {
@@ -613,21 +592,23 @@ o Section */
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-}/* Responsi
+}
+
+/* Responsi
 ve Design */
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
     }
-    
+
     .nav {
         padding: 20px;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -643,41 +624,41 @@ ve Design */
         transition: left 0.3s ease;
         border-top: 1px solid var(--gray-medium);
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .hero-title {
         font-size: clamp(40px, 12vw, 80px);
     }
-    
+
     .hero-subtitle::before,
     .hero-subtitle::after {
         display: none;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    
+
     .hero-btn {
         width: 200px;
         text-align: center;
     }
-    
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .work-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .about-text h2,
     .section-title,
     .contact-content h2 {
@@ -689,17 +670,17 @@ ve Design */
     .nav {
         padding: 15px 20px;
     }
-    
+
     .hero-title {
         font-size: clamp(32px, 15vw, 60px);
     }
-    
+
     .about-text h2,
     .section-title,
     .contact-content h2 {
         font-size: 28px;
     }
-    
+
     .work-info {
         padding: 20px;
     }
@@ -723,6 +704,7 @@ ve Design */
         opacity: 0;
         transform: translateY(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
