@@ -30,7 +30,7 @@ html {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 60px;
 }
 
 /* Header Styles */
@@ -55,7 +55,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 25px 60px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -73,7 +73,7 @@ html {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -215,13 +215,13 @@ o Section */
 /* Hero Buttons */
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .hero-btn {
-    padding: 15px 30px;
+    padding: 18px 35px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
     font-weight: 600;
@@ -273,7 +273,7 @@ o Section */
 
 /* About Section */
 .about {
-    padding: 120px 0;
+    padding: 140px 0;
     background: var(--white);
     color: var(--black);
     position: relative;
@@ -292,15 +292,15 @@ o Section */
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 80px;
-    max-width: 900px;
+    gap: 100px;
+    max-width: 1000px;
 }
 
 .about-text h2 {
     font-family: 'Inter', sans-serif;
     font-size: 48px;
     font-weight: 900;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     letter-spacing: -0.02em;
     color: var(--black);
     text-transform: uppercase;
@@ -320,7 +320,7 @@ o Section */
 .about-text p {
     font-size: 18px;
     line-height: 1.8;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     color: var(--gray-medium);
     font-weight: 400;
 }
@@ -329,7 +329,7 @@ o Section */
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     letter-spacing: 0.1em;
     color: var(--black);
     text-transform: uppercase;
@@ -342,12 +342,12 @@ o Section */
 .skills-list li {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     color: var(--gray-medium);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     position: relative;
-    padding-left: 20px;
+    padding-left: 25px;
     transition: all 0.2s ease;
 }
 
@@ -366,7 +366,7 @@ o Section */
 
 /* Work Section */
 .work {
-    padding: 120px 0;
+    padding: 140px 0;
     background: var(--black);
     position: relative;
 }
@@ -385,7 +385,7 @@ o Section */
     font-family: 'Inter', sans-serif;
     font-size: 48px;
     font-weight: 900;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     letter-spacing: -0.02em;
     color: var(--white);
     text-transform: uppercase;
@@ -405,7 +405,7 @@ o Section */
 .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 50px;
 }
 
 .work-item {
@@ -444,7 +444,7 @@ o Section */
 }
 
 .work-info {
-    padding: 30px;
+    padding: 35px;
     position: relative;
     z-index: 2;
     transition: color 0.3s ease;
@@ -454,7 +454,7 @@ o Section */
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     letter-spacing: -0.01em;
     color: var(--white);
     text-transform: uppercase;
@@ -464,7 +464,7 @@ o Section */
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     color: var(--gray-lighter);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -482,7 +482,7 @@ o Section */
 }
 
 .work-link::after {
-    content: ' →';
+    content: ' >';
     transition: transform 0.2s ease;
 }
 
@@ -794,5 +794,138 @@ button:focus {
 @media (max-width: 768px) {
     .work-grid::before {
         display: none;
+    }
+}/* Servi
+ces Section */
+.services {
+    padding: 140px 0;
+    background: var(--white);
+    color: var(--black);
+    position: relative;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--black);
+}
+
+.services .section-title {
+    color: var(--black);
+}
+
+.services .section-title::after {
+    background: var(--black);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.service-item {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px;
+    border: 2px solid var(--black);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.service-item:hover::before {
+    left: 0;
+}
+
+.service-item:hover {
+    color: var(--black);
+}
+
+.service-item > * {
+    position: relative;
+    z-index: 2;
+}
+
+.service-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: var(--gray-lighter);
+}
+
+.service-item:hover p {
+    color: var(--gray-medium);
+}
+
+.service-features {
+    list-style: none;
+}
+
+.service-features li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 25px;
+    color: var(--gray-lighter);
+}
+
+.service-item:hover .service-features li {
+    color: var(--gray-medium);
+}
+
+.service-features li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.service-item:hover .service-features li::before {
+    color: var(--black);
+}
+
+/* Mobile adjustments for services */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .service-item {
+        padding: 30px;
+    }
+    
+    .services {
+        padding: 100px 0;
     }
 }
